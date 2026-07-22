@@ -2082,11 +2082,10 @@ input:focus, textarea:focus {
 
 /* Ideology Quote Banner */
 .quote-banner {
-    background: linear-gradient(to bottom, #0b0c10 0%, #15161c 25%, #6a5a54 60%, #c1b1a7 85%, #faf6f0 100%);
+    background: linear-gradient(to bottom, var(--alias-bg) 0%, #15161c 25%, #6a5a54 60%, #c1b1a7 85%, var(--karigari-bg) 100%);
     padding: 8rem 5% 8rem 5%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    border-bottom: 1px solid rgba(44, 41, 37, 0.03);
+    border: none; /* Remove any border completely to prevent line lines */
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -2114,10 +2113,10 @@ input:focus, textarea:focus {
     font-style: italic;
     font-weight: 300;
     line-height: 1.5;
-    color: #1a1715; /* Premium deep charcoal for readability over light/dark gradient */
+    color: #ffffff; /* Bright white quote text */
     margin-bottom: 1.8rem;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45), 0 0 30px rgba(255, 255, 255, 0.15);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.4); /* High contrast black glow */
 }
 
 .quote-author {
@@ -2125,7 +2124,8 @@ input:focus, textarea:focus {
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 3px;
-    color: #524742; /* Medium earthy tone to balance the citation */
+    color: #ffffff; /* Bright white author text */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6); /* High contrast black glow */
 }
 
 /* Reels card video hover autoplay */
