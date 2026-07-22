@@ -12,7 +12,6 @@ let synthesisCtx = null;
 let canvasAnimationId = null;
 let particleArray = [];
 let visualMode = 'frequency'; // 'frequency' or 'particle'
-
 // --- Project Data ---
 const projectsData = {
     pandora: {
@@ -20,6 +19,8 @@ const projectsData = {
         tag: "AI Knowledge Discovery Platform",
         year: "2026 – Present",
         tech: ["Flutter", "Riverpod", "Firebase", "TypeScript", "Node.js", "Gemini API"],
+        liveUrl: "https://pandoras-box-app.web.app/",
+        githubUrl: "https://github.com/mohdsuhailx404/Pandoras_Box",
         desc: "An AI-powered collaborative knowledge directory enabling users to discover, organize, summarize, and discuss web resources through semantic search, AI-generated metadata, and community-driven collections.",
         bullets: [
             "Architected a cross-platform Flutter application using Riverpod for scalable state management and a serverless Firebase backend with Node.js/TypeScript Cloud Functions.",
@@ -47,6 +48,8 @@ async function ingestResource(url) {
         tag: "Student Expense Tracker",
         year: "2024 – 2025",
         tech: ["Vanilla JS", "HTML5", "CSS3", "SVG Engine", "LocalStorage"],
+        liveUrl: "https://chillar-student-expense-tracker.vercel.app/",
+        githubUrl: "https://github.com/mohdsuhailx404/Chillar-Student_Expense_Tracker",
         desc: "A personal finance and expense tracking platform enabling budgeting, savings planning, bill splitting, spending analytics, and interactive financial visualizations.",
         bullets: [
             "Architected a high-performance, serverless client-side Single-Page Application (SPA) using Vanilla ES6+ and custom state management with cryptographically isolated localStorage schemas.",
@@ -76,6 +79,8 @@ function drawDonutChart(canvasId, data) {
         tag: "Movie Recommendation System",
         year: "2024 – 2025",
         tech: ["Python", "Scikit-learn", "Pandas", "Streamlit", "TF-IDF"],
+        liveUrl: "https://filmy-movie-recommendation-system-domcdkefcffpbv2ewncqge.streamlit.app/",
+        githubUrl: "https://github.com/mohdsuhailx404/Filmy-Movie-Recommendation-System",
         desc: "An AI-powered content-based movie recommendation platform leveraging the MovieLens dataset, TF-IDF vectorization, and cosine similarity to generate personalized recommendations.",
         bullets: [
             "Built an AI-powered content-based movie recommendation platform leveraging the MovieLens dataset (100K+ ratings), TF-IDF vectorization, and cosine similarity to generate personalized recommendations.",
@@ -86,7 +91,7 @@ function drawDonutChart(canvasId, data) {
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
-
+ 
 def get_recommendations(title, cosine_sim, indices, df):
     idx = indices[title]
     sim_scores = list(enumerate(cosine_sim[idx]))
@@ -324,6 +329,11 @@ window.openProjectModal = function(projectId) {
             </div>
             <div class="modal-body">
                 <p>${project.desc}</p>
+                
+                <div class="modal-actions" style="margin: 1.5rem 0 2rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener" class="btn-side btn-blue" style="text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-external-link-alt"></i> Launch Live Demo</a>` : ''}
+                    ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn-side" style="text-decoration: none; border: 1px solid rgba(255,255,255,0.15); padding: 0.6rem 1.2rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; color: #fff; background: rgba(255,255,255,0.03);"><i class="fab fa-github"></i> GitHub Repository</a>` : ''}
+                </div>
                 
                 <h5>Technical Implementation Details</h5>
                 <ul class="bullets-list">
@@ -636,11 +646,63 @@ function initContactForm() {
     if (!form) return;
 }
 
-window.handleContactSubmit = function(event) {
+window.handleContactSubmit = async function(event) {
     event.preventDefault();
+    const form = event.target;
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    
     const name = document.getElementById('form-name').value;
-    alert(`Thank you, ${name}! Your connection request has been sent successfully.`);
-    document.getElementById('portfolio-contact-form').reset();
+    const email = document.getElementById('form-email').value;
+    const message = document.getElementById('form-message').value;
+    
+    // Paste your free Web3Forms Access Key here once you get it from web3forms.com
+    const web3FormsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+    
+    if (web3FormsAccessKey === "YOUR_WEB3FORMS_ACCESS_KEY_HERE" || web3FormsAccessKey === "") {
+        // Fallback to mailto link if key is not configured yet
+        const mailtoUrl = `mailto:mohdsuhailx404@gmail.com?subject=Portfolio Connection from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+        window.open(mailtoUrl, '_blank');
+        alert(`Opening mail client to send email to mohdsuhailx404@gmail.com. \n\n(To send seamlessly in the background without popups, enter your free key from web3forms.com in app.js)`);
+        form.reset();
+        return;
+    }
+    
+    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" style="margin-left: 8px;"></i>';
+    submitBtn.disabled = true;
+    
+    const formData = new FormData();
+    formData.append("access_key", web3FormsAccessKey);
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+    formData.append("subject", `New Portfolio Connection from ${name}`);
+    formData.append("from_name", "Portfolio Visitor");
+    
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+            alert(`Thank you, ${name}! Your message has been sent successfully to mohdsuhailx404@gmail.com.`);
+            form.reset();
+        } else {
+            alert(`Error: ${result.message || 'Something went wrong. Redirecting to mail client.'}`);
+            const mailtoUrl = `mailto:mohdsuhailx404@gmail.com?subject=Portfolio Connection from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            window.open(mailtoUrl, '_blank');
+            form.reset();
+        }
+    } catch (error) {
+        alert('Connection error. Redirecting to mail client.');
+        const mailtoUrl = `mailto:mohdsuhailx404@gmail.com?subject=Portfolio Connection from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+        window.open(mailtoUrl, '_blank');
+        form.reset();
+    } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
 };
 
 // --- Helper Utilities ---
