@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohd Suhail | Portfolio — Synthesis of Code & Art</title>
+    <meta name="description" content="Portfolio of Mohd Suhail. B.Tech Computer Science student, creator of Alias (Software Products) and Karigari (Art & Music). Exploring the intersection of logic and creativity.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <a href="#" class="logo">
+            <span class="logo-text-alias">SUHAIL</span>
+            <span class="logo-slash">/</span>
+            <span class="logo-text-karigari">suhail</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#alias-section" class="nav-link-alias">Alias (Code)</a>
+            <a href="#karigari-section" class="nav-link-karigari">Karigari (Art)</a>
+            <a href="#synthesis-section" class="nav-link-synthesis">The Synthesis</a>
+            <a href="#contact-section" class="nav-link-contact">Connect</a>
+        </nav>
+        <div class="header-actions">
+            <a href="#contact-section" class="cta-btn">Get In Touch</a>
+        </div>
+    </header>
+
+    <!-- Split-Screen Hero Section -->
+    <section class="split-hero">
+        <!-- Alias Hero Side (Tech) -->
+        <div class="hero-side alias-side" id="hero-alias-side">
+            <div class="side-background">
+                <div class="grid-overlay"></div>
+                <div class="glow-orb" id="orb-alias"></div>
+            </div>
+            <div class="side-content">
+                <span class="side-tag">ALIAS // SOFTWARE APPS</span>
+                <h1 class="side-title font-tech">BUILDING<br><span class="highlight-blue">UTILITY</span><br>WITH LOGIC</h1>
+                <p class="side-desc">Final Year CSE Undergrad crafting scalable AI systems, cross-platform apps, and interactive IoT devices.</p>
+                <div class="side-buttons">
+                    <a href="#alias-section" class="btn-side btn-blue">Explore Code</a>
+                    <span class="tech-stack-indicator">Flutter · Firebase · Python · Node.js</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karigari Hero Side (Art) -->
+        <div class="hero-side karigari-side" id="hero-karigari-side">
+            <div class="side-background">
+                <div class="organic-shapes">
+                    <div class="organic-shape shape-1"></div>
+                    <div class="organic-shape shape-2"></div>
+                </div>
+                <div class="glow-orb" id="orb-karigari"></div>
+            </div>
+            <div class="side-content">
+                <span class="side-tag">KARIGARI // CREATIVE VOICE</span>
+                <h1 class="side-title font-art">CREATING<br><span class="highlight-gold">RESONANCE</span><br>WITH SOUL</h1>
+                <p class="side-desc">Singer, artist, and founder of Karigari, translating raw human emotions into strokes of paint and vocal melodies.</p>
+                <div class="side-buttons">
+                    <a href="#karigari-section" class="btn-side btn-gold">Explore Art & Music</a>
+                    <span class="art-stack-indicator">Sketches · Acoustic Covers · Cultural Director</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to merge</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PORTFOLIO SECTIONS (SCROLL DOWN) -->
+    <main class="portfolio-container">
+
+        <!-- ==================== ALIAS (TECH) SECTION ==================== -->
+        <section id="alias-section" class="portfolio-section alias-theme">
+            <div class="section-bg-grid"></div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-pretitle font-tech">// THE ENGINEER</span>
+                    <h2 class="section-title font-tech">ALIAS <span class="dim">&lt;</span>UTILITY APPLICATIONS<span class="dim">&gt;</span></h2>
+                    <p class="section-desc">Building software designed with single-purpose utility, optimized workflows, and clean code principles.</p>
+                </div>
+
+                <!-- Bio / Education Brief -->
+                <div class="tech-intro-grid">
+                    <div class="tech-bio-card glass-card">
+                        <h3>About Suhail (Developer)</h3>
+                        <p>Currently in my final year of B.Tech in Computer Science & Engineering, I focus on bridging high-level software stacks with low-level embedded hardware and machine learning systems.</p>
+                        <div class="edu-item">
+                            <span class="edu-date">2023 – 2027</span>
+                            <h4>B.Tech in Computer Science & Engineering</h4>
+                            <p class="edu-place">Dr. A.P.J. Abdul Kalam Technical University (IMS Engineering College)</p>
+                            <span class="badge badge-blue">CGPA: 7.54</span>
+                        </div>
+                        <div class="edu-item">
+                            <span class="edu-date">Class XII (AIR 9 - CISCE)</span>
+                            <h4>City Montessori School, Lucknow</h4>
+                            <p class="edu-place">Class XII: 97.75% | Class X: 95.2%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skills Widget -->
+                    <div class="skills-dashboard glass-card">
+                        <h3>Technical Skills Directory</h3>
+                        <div class="skills-category-list">
+                            <div class="skill-group">
+                                <span class="skill-group-title">Languages</span>
+                                <div class="skill-chips">
+                                    <span class="chip">Java</span>
+                                    <span class="chip">Python</span>
+                                    <span class="chip">C</span>
+                                    <span class="chip">JavaScript (ES6+)</span>
+                                    <span class="chip">TypeScript</span>
+                                    <span class="chip">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-title">Frameworks & Cloud</span>
+                                <div class="skill-chips">
+                                    <span class="chip">Flutter</span>
+                                    <span class="chip">Riverpod</span>
+                                    <span class="chip">Firebase</span>
+                                    <span class="chip">Node.js</span>
+                                    <span class="chip">Express</span>
+                                    <span class="chip">Vercel</span>
+                                    <span class="chip">Streamlit</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <span class="skill-group-title">AI / ML & IoT</span>
+                                <div class="skill-chips">
+                                    <span class="chip">RAG & Prompt Eng.</span>
+                                    <span class="chip">Gemini API</span>
+                                    <span class="chip">Scikit-learn</span>
+                                    <span class="chip">Pandas / NumPy</span>
+                                    <span class="chip">ESP32 / Arduino</span>
+                                    <span class="chip">Embedded C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <h3 class="section-subtitle font-tech">[ CORE PROJECTS ]</h3>
+                <div class="projects-grid">
+                    <!-- Project 1: Pandora's Box -->
+                    <div class="project-card glass-card" data-project="pandora">
+                        <div class="project-header">
+                            <span class="project-tag">AI Knowledge Platform</span>
+                            <span class="project-year">2026 – Present</span>
+                        </div>
+                        <h4 class="project-title">Pandora's Box</h4>
+                        <p class="project-summary">AI-powered collaborative knowledge directory enabling semantic discovery, Gemini-powered summarization, and Spotify-style Blend lists.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Riverpod</span>
+                            <span>Firebase</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                        </div>
+                        <button class="project-link-btn" onclick="openProjectModal('pandora')">View Architecture & Details &rarr;</button>
+                    </div>
+
+                    <!-- Project 2: Chillar -->
+                    <div class="project-card glass-card" data-project="chillar">
+                        <div class="project-header">
+                            <span class="project-tag">Finance Web App</span>
+                            <span class="project-year">2024 – 2025</span>
+                        </div>
+                        <h4 class="project-title">Chillar</h4>
+                        <p class="project-summary">A clean, high-performance personal finance tracker featuring SVG visual charts, offline-first localStorage, and roommate bill splitting.</p>
+                        <div class="project-tech">
+                            <span>Vanilla JS</span>
+                            <span>HTML5 CSS3</span>
+                            <span>SVG Engine</span>
+                            <span>Vercel</span>
+                        </div>
+                        <button class="project-link-btn" onclick="openProjectModal('chillar')">View Architecture & Details &rarr;</button>
+                    </div>
+
+                    <!-- Project 3: Filmy -->
+                    <div class="project-card glass-card" data-project="filmy">
+                        <div class="project-header">
+                            <span class="project-tag">AI Movie Engine</span>
+                            <span class="project-year">2024 – 2025</span>
+                        </div>
+                        <h4 class="project-title">Filmy</h4>
+                        <p class="project-summary">AI recommendation engine analyzing 100K+ ratings using cosine-similarity and TF-IDF vectorization with a Streamlit UI.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <button class="project-link-btn" onclick="openProjectModal('filmy')">View Architecture & Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Tech Experience -->
+                <h3 class="section-subtitle font-tech">[ INTERNSHIPS & EXPERIENCE ]</h3>
+                <div class="experience-timeline">
+                    <div class="timeline-item glass-card">
+                        <div class="time-header">
+                            <span class="time-date">Jun 2026 – Jul 2026</span>
+                            <span class="time-badge badge-blue">IoT & Prototyping</span>
+                        </div>
+                        <h4>Intern / Research Trainee — Infosys Springboard Maker Lab</h4>
+                        <p class="time-sub">Centre for Advanced Studies (CAS), AKTU Lucknow</p>
+                        <ul class="time-bullets">
+                            <li>Selected as the sole student representative from IMSEC for AKTU's competitive maker internship.</li>
+                            <li>Designed and prototyped 10+ embedded/IoT systems using Arduino, ESP32, environmental sensors, and wireless modules.</li>
+                            <li>Engineered robotic arm automation routines and rapid physical prototypes using Onshape CAD and 3D printing.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item glass-card">
+                        <div class="time-header">
+                            <span class="time-date">Jun 2026 – Jul 2026</span>
+                            <span class="time-badge badge-purple">AI & Generative Systems</span>
+                        </div>
+                        <h4>AI Intern — IBM PBEL Virtual Internship</h4>
+                        <p class="time-sub">Project-Based Experiential Learning (PBEL)</p>
+                        <ul class="time-bullets">
+                            <li>Built end-to-end ML pipelines with IBM Watson Studio and watsonx.ai.</li>
+                            <li>Designed context-aware Generative AI applications utilizing Prompt Engineering and Retrieval-Augmented Generation (RAG).</li>
+                            <li>Evaluated model performance using statistical metrics for enterprise workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== KARIGARI (ART & MUSIC) SECTION ==================== -->
+        <section id="karigari-section" class="portfolio-section karigari-theme">
+            <div class="section-bg-organic"></div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-pretitle font-art">The Expressive Spirit</span>
+                    <h2 class="section-title font-art">Karigari <span class="cursive">&amp;</span> Music</h2>
+                    <p class="section-desc">Artistic creations, sketches, and acoustic melodies. Karigari is a canvas where abstract thoughts take form, and vocals create resonance.</p>
+                </div>
+
+                <!-- Singing Section: Interactive Reels -->
+                <div class="music-singing-block">
+                    <div class="music-intro">
+                        <h3 class="font-art">Acoustic Covers & Reels</h3>
+                        <p>I find peace in music. I sing and perform acoustic renditions of songs that move me. These are shared on Instagram as reels, showcasing my musical side.</p>
+                        <div class="now-playing-status">
+                            <div class="pulse-indicator"></div>
+                            <span>Click a reel to listen to my performance covers</span>
+                        </div>
+                    </div>
+
+                    <div class="reels-deck">
+                        <!-- Reel Card 1 -->
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover1.mp3', 'Late Night Acoustics', 'Raw vocals & acoustic chords')">
+                            <div class="reel-thumbnail">
+                                <div class="reel-overlay">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                                <div class="reel-tags">
+                                    <span>🎤 Vocal Cover</span>
+                                    <span>❤️ 1.2k</span>
+                                </div>
+                            </div>
+                            <div class="reel-info">
+                                <h5>Late Night Acoustics</h5>
+                                <p>A raw, unplugged cover. Pure vocals and acoustic rhythm.</p>
+                            </div>
+                        </div>
+
+                        <!-- Reel Card 2 -->
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover2.mp3', 'Melodic Soul Cover', 'Strumming to the sunset - Acoustic Vibe')">
+                            <div class="reel-thumbnail">
+                                <div class="reel-overlay">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                                <div class="reel-tags">
+                                    <span>🎸 Guitar & Voice</span>
+                                    <span>❤️ 890</span>
+                                </div>
+                            </div>
+                            <div class="reel-info">
+                                <h5>Melodic Soul</h5>
+                                <p>Exploring ambient notes with voice-layering highlights.</p>
+                            </div>
+                        </div>
+
+                        <!-- Reel Card 3 -->
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover3.mp3', 'Classic Indie Ballad', 'Classic cover with warm textures')">
+                            <div class="reel-thumbnail">
+                                <div class="reel-overlay">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                                <div class="reel-tags">
+                                    <span>🎵 Indie Cover</span>
+                                    <span>❤️ 1.5k</span>
+                                </div>
+                            </div>
+                            <div class="reel-info">
+                                <h5>Classic Indie Ballad</h5>
+                                <p>A tribute to retro indie classics, layered with warm harmonies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Gallery Section -->
+                <h3 class="section-subtitle font-art">Karigari Sketchbook & Painting</h3>
+                <div class="art-gallery-grid">
+                    <div class="gallery-item large" onclick="openImageLightBox('assets/karigari_sketch_3.png', 'Charcoal Spotlight', 'Charcoal portrait of a retro singer under a spotlight, highlighting depth and emotional resonance.')">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/karigari_sketch_3.png" alt="Charcoal Spotlight Portrait" loading="lazy">
+                            <div class="gallery-hover-info">
+                                <h4>Charcoal Spotlight</h4>
+                                <p>Medium: Charcoal & Chalk on Toned Paper</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openImageLightBox('assets/karigari_sketch_1.png', 'Harmony of Strings', 'Pencil sketch of a classic guitar resting silently in a room with warm afternoon shadows.')">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/karigari_sketch_1.png" alt="Acoustic Guitar Sketch" loading="lazy">
+                            <div class="gallery-hover-info">
+                                <h4>Harmony of Strings</h4>
+                                <p>Medium: Graphite Pencil Sketch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openImageLightBox('assets/karigari_sketch_2.png', 'Synthesized Mind', 'Abstract ink painting depicting a portrait merging into waves of frequencies and algorithms.')">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/karigari_sketch_2.png" alt="Abstract Ink Portrait" loading="lazy">
+                            <div class="gallery-hover-info">
+                                <h4>Synthesized Mind</h4>
+                                <p>Medium: Ink & Watercolor on Canvas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== THE SYNTHESIS SECTION ==================== -->
+        <section id="synthesis-section" class="portfolio-section synthesis-theme">
+            <div class="blend-background"></div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-pretitle font-tech">// THE CONVERGENCE</span>
+                    <h2 class="section-title">Where Logic Meets Soul</h2>
+                    <p class="section-desc">Engineering builds structures. Art gives them life. My hardware hacking, IoT prototyping, and cultural leadership connect these two dimensions.</p>
+                </div>
+
+                <div class="synthesis-row">
+                    <!-- Physical Computing (Infosys Maker Lab Integration) -->
+                    <div class="synthesis-card glass-card">
+                        <div class="card-icon-container">
+                            <svg viewBox="0 0 24 24" class="synthesis-svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"/></svg>
+                        </div>
+                        <h3>Physical Computing & IoT</h3>
+                        <p>At the <strong>Infosys Springboard Maker Lab</strong>, I designed and fabricated 10+ embedded solutions using ESP32, environmental sensors, and wireless communication. Here, code manifests in the physical world through robotics, CAD modeling, and 3D printing—a pure tangible form of art.</p>
+                        <span class="badge-blend">ESP32 · Onshape CAD · 3D Printing</span>
+                    </div>
+
+                    <!-- Cultural Leadership (Advitiya Vice President) -->
+                    <div class="synthesis-card glass-card">
+                        <div class="card-icon-container">
+                            <svg viewBox="0 0 24 24" class="synthesis-svg"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <h3>Creative Direction & Leadership</h3>
+                        <p>As the **Vice President and Founding Member** of the <strong>Advitiya Cultural Society, IMSEC</strong>, I orchestrate cultural festivals, lead creative student teams, and perform vocal covers. This leadership bridges project management, team organization, and artistic vision.</p>
+                        <span class="badge-blend">Organizing · Live Performances · Team Dynamics</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Frequency Visualizer Widget -->
+                <div class="visualizer-interactive-card glass-card">
+                    <div class="vis-info">
+                        <h3>Resonance Canvas</h3>
+                        <p>Move your mouse over the screen or play one of the musical covers above to see the frequency spectrum bridge the gap between digital grids and artistic brush patterns.</p>
+                        <button class="btn-side btn-blue" id="btn-toggle-vis-style">Switch Visual Mode</button>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="synthesis-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONNECT / FOOTER SECTION ==================== -->
+        <section id="contact-section" class="portfolio-section contact-theme">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-text-block">
+                        <h2 class="font-tech">LET'S BUILD SOMETHING BEAUTIFUL</h2>
+                        <p>Whether you're looking to hire a software engineer with AI/IoT experience, collaborate on a utility product under **Alias**, showcase artwork on **Karigari**, or just talk music, I'm always open to connecting.</p>
+                        
+                        <div class="contact-channels">
+                            <div class="channel">
+                                <span class="channel-label">Email</span>
+                                <a href="mailto:sohail722005@gmail.com" class="channel-value">sohail722005@gmail.com</a>
+                            </div>
+                            <div class="channel">
+                                <span class="channel-label">Call</span>
+                                <a href="tel:+919506279123" class="channel-value">+91-9506279123</a>
+                            </div>
+                            <div class="channel">
+                                <span class="channel-label">Location</span>
+                                <span class="channel-value">Lucknow / Ghaziabad, India</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links-footer">
+                            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://leetcode.com" target="_blank" rel="noopener">LeetCode</a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram (Karigari)</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Contact Form -->
+                    <div class="contact-form-card glass-card">
+                        <h3>Send a Message</h3>
+                        <form id="portfolio-contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-email">Email</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Your Message</label>
+                                <textarea id="form-message" rows="4" placeholder="Let's talk about projects, art, or music..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn font-tech">Send Connection Request</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Mohd Suhail. All rights reserved. Crafted with clean code and creative spirit.</p>
+                    <a href="assets/MOHD_SUHAIL_Resume.pdf" download class="resume-download-btn">
+                        <svg viewBox="0 0 24 24" class="download-icon"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                        Download Resume PDF
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== INTERACTIVE MODALS & LIGHTBOXES ==================== -->
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-overlay" onclick="closeProjectModal()">
+        <div class="modal-content glass-card" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+            <div id="project-modal-body">
+                <!-- Content injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Instagram Reel Audio Player Modal -->
+    <div id="reel-player-modal" class="modal-overlay" onclick="closeReelPlayer()">
+        <div class="modal-content reel-modal-content glass-card" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeReelPlayer()">&times;</button>
+            <div class="reel-player-layout">
+                <!-- Phone Wrapper for Reels simulation -->
+                <div class="mock-phone">
+                    <div class="phone-screen">
+                        <div class="reel-video-container">
+                            <!-- Visual Waveform pulsing for singing reels -->
+                            <div class="music-visualizer-bars" id="vocal-visualizer-bars">
+                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            </div>
+                            <div class="record-disk-animation">
+                                <div class="vinyl-disk"></div>
+                            </div>
+                            
+                            <!-- Controls Overlay -->
+                            <div class="reel-player-ui">
+                                <div class="reel-right-buttons">
+                                    <div class="reel-btn active-heart" onclick="toggleReelHeart(this)">
+                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                        <span class="count">1.4k</span>
+                                    </div>
+                                    <div class="reel-btn">
+                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                                        <span class="count">88</span>
+                                    </div>
+                                    <div class="reel-btn">
+                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                        <span class="count">Share</span>
+                                    </div>
+                                </div>
+                                <div class="reel-bottom-info">
+                                    <strong class="vocal-tag">@karigari.vocals</strong>
+                                    <p class="vocal-song-title" id="reel-vocal-title">Acoustic Cover Track</p>
+                                    <p class="vocal-desc" id="reel-vocal-desc">Vocals & String arrangement.</p>
+                                    <div class="audio-scrubber-container">
+                                        <span class="time-label" id="audio-time-current">0:00</span>
+                                        <input type="range" class="audio-scrubber" id="audio-seek-slider" max="100" value="0">
+                                        <span class="time-label" id="audio-time-duration">0:00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Play/Pause Big overlay -->
+                            <div class="big-play-btn" id="big-play-trigger" onclick="toggleAudioPlayback()">
+                                <svg viewBox="0 0 24 24" id="big-play-svg"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reel-player-sidebar">
+                    <h3 id="sidebar-reel-title">Late Night Singing Cover</h3>
+                    <p id="sidebar-reel-description">Detailed notes: Recorded using studio-quality microphone over guitar track. Explores high vocal ranges and resonance controls.</p>
+                    <div class="music-tips-card">
+                        <strong>Performance Highlights:</strong>
+                        <ul>
+                            <li>Raw, double-tracked harmonies.</li>
+                            <li>Natural room reverb representation.</li>
+                            <li>Acoustic fingerstyle guitar backing.</li>
+                        </ul>
+                    </div>
+                    <!-- Audio element -->
+                    <audio id="reel-audio-element" src=""></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-lightbox" class="modal-overlay" onclick="closeImageLightBox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeImageLightBox()">&times;</button>
+            <img id="lightbox-img" src="" alt="Full size artwork">
+            <div class="lightbox-caption">
+                <h4 id="lightbox-title">Artwork Title</h4>
+                <p id="lightbox-desc">Artwork Description</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

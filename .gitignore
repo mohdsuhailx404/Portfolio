@@ -1,0 +1,12 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+.pnp/
+.pnp.js
