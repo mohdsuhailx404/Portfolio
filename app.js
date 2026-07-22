@@ -657,7 +657,7 @@ window.handleContactSubmit = async function(event) {
     const message = document.getElementById('form-message').value;
     
     // Paste your free Web3Forms Access Key here once you get it from web3forms.com
-    const web3FormsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+    const web3FormsAccessKey = "6d68ba70-c008-4a79-920c-cd51f6efd24c";
     
     if (web3FormsAccessKey === "YOUR_WEB3FORMS_ACCESS_KEY_HERE" || web3FormsAccessKey === "") {
         // Fallback to mailto link if key is not configured yet
