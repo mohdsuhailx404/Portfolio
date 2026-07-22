@@ -247,6 +247,17 @@
             </div>
         </section>
 
+        <!-- Ideology Quote Banner -->
+        <section class="quote-banner">
+            <div class="container">
+                <blockquote class="ideology-quote">
+                    "In this world of chaos,<br>
+                    Art in its every form is our only redemption."
+                </blockquote>
+                <cite class="quote-author">— MOHD SUHAIL</cite>
+            </div>
+        </section>
+
         <!-- ==================== KARIGARI (ART & MUSIC) SECTION ==================== -->
         <section id="karigari-section" class="portfolio-section karigari-theme">
             <div class="section-bg-organic"></div>
@@ -265,60 +276,63 @@
                         <p>I find peace in music. I sing and perform acoustic renditions of songs that move me. These are shared on Instagram as reels, showcasing my musical side.</p>
                         <div class="now-playing-status" style="margin-bottom: 2rem;">
                             <div class="pulse-indicator"></div>
-                            <span>Click a reel to listen to my performance covers</span>
+                            <span>Hover over a reel to play preview, click to open details</span>
                         </div>
-                        <a href="https://www.instagram.com/p/DJ35btGpQsB/" target="_blank" rel="noopener" class="btn-side btn-gold">Read Karigari Origin Story &rarr;</a>
+                        <a href="https://www.instagram.com/p/DJ35btGpQsB/" target="_blank" rel="noopener" class="btn-side btn-gold">Know About Karigari &rarr;</a>
                     </div>
 
                     <div class="reels-deck">
                         <!-- Reel Card 1 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover1.mp3', 'Late Night Acoustics', 'Raw vocals & acoustic chords', 'https://www.instagram.com/reel/DJwjM16JYNh/')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover1.mp3', 'Late Night Acoustics', 'Raw vocals & acoustic chords', 'https://www.instagram.com/reel/DJwjM16JYNh/', 'beggin')">
                             <div class="reel-thumbnail">
+                                <video class="reel-hover-video" src="https://assets.mixkit.co/videos/preview/mixkit-rock-band-performing-on-stage-4424-large.mp4" loop muted playsinline></video>
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
                                 <div class="reel-tags">
-                                    <span>🎤 Vocal Cover</span>
-                                    <span>❤️ 1.2k</span>
+                                    <span>🎤 Live Climax</span>
+                                    <span>❤️ 1.4k</span>
                                 </div>
                             </div>
                             <div class="reel-info">
-                                <h5>Late Night Acoustics</h5>
-                                <p>A raw, unplugged cover. Pure vocals and acoustic rhythm.</p>
+                                <h5>Beggin' (Live Climax)</h5>
+                                <p>High-energy stage climax performance of Måneskin's Beggin'.</p>
                             </div>
                         </div>
 
                         <!-- Reel Card 2 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover2.mp3', 'Melodic Soul Cover', 'Strumming to the sunset - Acoustic Vibe', 'https://www.instagram.com/reel/DYw0VQWhFCq/')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover2.mp3', 'Melodic Soul Cover', 'Strumming to the sunset - Acoustic Vibe', 'https://www.instagram.com/reel/DYw0VQWhFCq/', 'sunset')">
                             <div class="reel-thumbnail">
+                                <video class="reel-hover-video" src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-guitarist-playing-acoustic-guitar-41559-large.mp4" loop muted playsinline></video>
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
                                 <div class="reel-tags">
-                                    <span>🎸 Guitar & Voice</span>
+                                    <span>🎸 Sunset Vibe</span>
                                     <span>❤️ 890</span>
                                 </div>
                             </div>
                             <div class="reel-info">
-                                <h5>Melodic Soul</h5>
-                                <p>Exploring ambient notes with voice-layering highlights.</p>
+                                <h5>Acoustic Sunset Vibe</h5>
+                                <p>Exploring ambient notes with voice-layering and acoustic guitar.</p>
                             </div>
                         </div>
 
                         <!-- Reel Card 3 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover3.mp3', 'Classic Indie Ballad', 'Classic cover with warm textures', 'https://www.instagram.com/reel/DXAUFTuk0Gh/')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover3.mp3', 'Classic Indie Ballad', 'Classic cover with warm textures', 'https://www.instagram.com/reel/DXAUFTuk0Gh/', 'indie')">
                             <div class="reel-thumbnail">
+                                <video class="reel-hover-video" src="https://assets.mixkit.co/videos/preview/mixkit-singer-singing-into-a-microphone-in-a-studio-41558-large.mp4" loop muted playsinline></video>
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
                                 <div class="reel-tags">
-                                    <span>🎵 Indie Cover</span>
-                                    <span>❤️ 1.5k</span>
+                                    <span>🎵 Indie Retro</span>
+                                    <span>❤️ 1.2k</span>
                                 </div>
                             </div>
                             <div class="reel-info">
-                                <h5>Classic Indie Ballad</h5>
-                                <p>A tribute to retro indie classics, layered with warm harmonies.</p>
+                                <h5>Retro Indie Ballad</h5>
+                                <p>A tribute to classic indie tracks, layered with warm vocal harmonies.</p>
                             </div>
                         </div>
                     </div>
@@ -489,75 +503,135 @@
 
     <!-- Instagram Reel Audio Player Modal -->
     <div id="reel-player-modal" class="modal-overlay" onclick="closeReelPlayer()">
-        <div class="modal-content reel-modal-content glass-card" onclick="event.stopPropagation()">
+        <div class="modal-content reel-modal-content" onclick="event.stopPropagation()">
             <button class="modal-close-btn" onclick="closeReelPlayer()">&times;</button>
-            <div class="reel-player-layout">
-                <!-- Phone Wrapper for Reels simulation -->
-                <div class="mock-phone">
-                    <div class="phone-screen">
-                        <div class="reel-video-container">
-                            <!-- Visual Waveform pulsing for singing reels -->
-                            <div class="music-visualizer-bars" id="vocal-visualizer-bars">
-                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="ig-modal-layout">
+                <!-- Left: Video Panel -->
+                <div class="ig-video-panel">
+                    <div class="reel-video-container">
+                        <!-- Visual Waveform pulsing for singing reels -->
+                        <div class="music-visualizer-bars" id="vocal-visualizer-bars">
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        </div>
+                        <div class="record-disk-animation">
+                            <div class="vinyl-disk"></div>
+                        </div>
+                        
+                        <!-- Video Controls Overlay -->
+                        <div class="reel-player-ui-ig">
+                            <div class="audio-scrubber-container">
+                                <span class="time-label" id="audio-time-current">0:00</span>
+                                <input type="range" class="audio-scrubber" id="audio-seek-slider" max="100" value="0">
+                                <span class="time-label" id="audio-time-duration">0:00</span>
                             </div>
-                            <div class="record-disk-animation">
-                                <div class="vinyl-disk"></div>
-                            </div>
-                            
-                            <!-- Controls Overlay -->
-                            <div class="reel-player-ui">
-                                <div class="reel-right-buttons">
-                                    <div class="reel-btn active-heart" onclick="toggleReelHeart(this)">
-                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                                        <span class="count">1.4k</span>
-                                    </div>
-                                    <div class="reel-btn">
-                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-                                        <span class="count">88</span>
-                                    </div>
-                                    <div class="reel-btn">
-                                        <svg viewBox="0 0 24 24" class="reel-svg"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                                        <span class="count">Share</span>
-                                    </div>
-                                </div>
-                                <div class="reel-bottom-info">
-                                    <strong class="vocal-tag">@karigari.vocals</strong>
-                                    <p class="vocal-song-title" id="reel-vocal-title">Acoustic Cover Track</p>
-                                    <p class="vocal-desc" id="reel-vocal-desc">Vocals & String arrangement.</p>
-                                    <div class="audio-scrubber-container">
-                                        <span class="time-label" id="audio-time-current">0:00</span>
-                                        <input type="range" class="audio-scrubber" id="audio-seek-slider" max="100" value="0">
-                                        <span class="time-label" id="audio-time-duration">0:00</span>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
 
-                            <!-- Play/Pause Big overlay -->
-                            <div class="big-play-btn" id="big-play-trigger" onclick="toggleAudioPlayback()">
-                                <svg viewBox="0 0 24 24" id="big-play-svg"><path d="M8 5v14l11-7z"/></svg>
-                            </div>
+                        <!-- Play/Pause Big overlay -->
+                        <div class="big-play-btn" id="big-play-trigger" onclick="toggleAudioPlayback()">
+                            <svg viewBox="0 0 24 24" id="big-play-svg"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                     </div>
                 </div>
                 
-                <div class="reel-player-sidebar">
-                    <h3 id="sidebar-reel-title">Late Night Singing Cover</h3>
-                    <p id="sidebar-reel-description">Detailed notes: Recorded using studio-quality microphone over guitar track. Explores high vocal ranges and resonance controls.</p>
-                    <div class="music-tips-card">
-                        <strong>Performance Highlights:</strong>
-                        <ul>
-                            <li>Raw, double-tracked harmonies.</li>
-                            <li>Natural room reverb representation.</li>
-                            <li>Acoustic fingerstyle guitar backing.</li>
-                        </ul>
+                <!-- Right: Instagram Sidebar Panel -->
+                <div class="ig-comments-panel">
+                    <!-- Header: Profile & Account -->
+                    <div class="ig-panel-header">
+                        <div class="ig-profile-pic">
+                            <span>K</span>
+                        </div>
+                        <div class="ig-header-text">
+                            <span class="ig-username">_.karigari_</span>
+                            <span class="ig-music-meta" id="reel-music-tag">Måneskin · Beggin'</span>
+                        </div>
                     </div>
-                    <!-- Audio element -->
-                    <audio id="reel-audio-element" src=""></audio>
-                    <a id="reel-instagram-link" href="#" target="_blank" rel="noopener" class="btn-side btn-gold" style="width: 100%; text-align: center; margin-top: 1.8rem; display: inline-block;">Open Original Reel</a>
+                    
+                    <!-- Comments/Description Scroll Area -->
+                    <div class="ig-panel-comments">
+                        <!-- Author Caption -->
+                        <div class="ig-comment-row">
+                            <div class="ig-profile-pic small">
+                                <span>K</span>
+                            </div>
+                            <div class="ig-comment-content">
+                                <span class="ig-username">_.karigari_</span>
+                                <span class="ig-caption-text" id="reel-caption-text">Watch till end—there's a message for all the artists out there...</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Mock Comments representing active community -->
+                        <div class="ig-comment-row">
+                            <div class="ig-profile-pic small user-a">
+                                <span>J</span>
+                            </div>
+                            <div class="ig-comment-content">
+                                <span class="ig-username">jaaaanhvi</span>
+                                <span class="ig-caption-text">Amazing energy! Truly rocked the stage here! 🔥🎸</span>
+                            </div>
+                        </div>
+                        <div class="ig-comment-row">
+                            <div class="ig-profile-pic small user-b">
+                                <span>R</span>
+                            </div>
+                            <div class="ig-comment-content">
+                                <span class="ig-username">rohit_arts</span>
+                                <span class="ig-caption-text">Vocals are so raw and full of soul. Love the climax part! 🙌</span>
+                            </div>
+                        </div>
+                        <div class="ig-comment-row">
+                            <div class="ig-profile-pic small user-c">
+                                <span>A</span>
+                            </div>
+                            <div class="ig-comment-content">
+                                <span class="ig-username">advitiya_fam</span>
+                                <span class="ig-caption-text">Founding VP representing! Brilliant performance! 🎵🔥</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Likes and Actions Bar -->
+                    <div class="ig-panel-actions">
+                        <div class="ig-action-icons">
+                            <div class="left-icons">
+                                <button class="ig-icon-btn active-heart" onclick="toggleReelHeart(this)">
+                                    <svg viewBox="0 0 24 24" class="ig-svg-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <button class="ig-icon-btn">
+                                    <svg viewBox="0 0 24 24" class="ig-svg-icon"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                                </button>
+                                <button class="ig-icon-btn">
+                                    <svg viewBox="0 0 24 24" class="ig-svg-icon"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                </button>
+                            </div>
+                            <div class="right-icons">
+                                <button class="ig-icon-btn">
+                                    <svg viewBox="0 0 24 24" class="ig-svg-icon"><path d="M19 18H5V6h3V4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-3h-2v3zM14 4v2h3.59l-9.83 9.83 1.41 1.41L19 7.41V11h2V4h-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="ig-likes-count">
+                            <span id="reel-likes-label">Liked by jaaaanhvi and 80 others</span>
+                        </div>
+                        <div class="ig-post-date">
+                            <span id="reel-post-date">MAY 17, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Comment Textarea -->
+                    <div class="ig-add-comment-box">
+                        <input type="text" placeholder="Add a comment..." class="ig-comment-input">
+                        <button class="ig-comment-post-btn" onclick="postMockComment(this)">Post</button>
+                    </div>
+                    
+                    <div class="ig-bottom-link-container">
+                        <a id="reel-instagram-link" href="#" target="_blank" rel="noopener" class="ig-external-btn">Open on Instagram</a>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </div>
 

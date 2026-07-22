@@ -97,6 +97,31 @@ def get_recommendations(title, cosine_sim, indices, df):
     }
 };
 
+// --- Instagram Reels Database ---
+const reelsDatabase = {
+    beggin: {
+        musicTag: "_.karigari_ · Beggin' (Måneskin Cover)",
+        captionText: "Watch till end—there's a message for all the artists out there... 🫡\n\nThe Climax is here Guys!!! 😭🔥\nAnd it's everything you expect it to be. Tbh throughout the performance, the part that I was the most excited about was \"The End\" 😂. And you can figure that out when I revealed, \"We have reached the Climax of this Show!\" That sudden change in energy and vibe, I felt it coming and so will you!!\n\nThanks to all my friends who were there to support me just down by the stage. I mean the pressure to perform in front of such a big crowd was too much, but all you guys' enthusiasm & support made me feel at ease and ROCK THE STAGE!!! 🎸🔥\n\nDo share your opinion of the entire performance, and how'd you rate it. Your criticism motivates me to do better. Thankyou! 💫",
+        likesLabel: "Liked by jaaaanhvi and 80 others",
+        postDate: "MAY 17, 2025",
+        reelUrl: "https://www.instagram.com/reel/DJwjM16JYNh/"
+    },
+    sunset: {
+        musicTag: "_.karigari_ · Sunset Chords (Acoustic Original)",
+        captionText: "Strumming to the sunset 🌅🎸\n\nHere is a quick acoustic snippet exploring some soft chord transitions and vocal dynamics. Let me know what you think of this vibe in the comments!\n\n#acoustic #guitar #vocals #karigari #aesthetic",
+        likesLabel: "Liked by rohit_arts and 45 others",
+        postDate: "OCTOBER 12, 2025",
+        reelUrl: "https://www.instagram.com/reel/DYw0VQWhFCq/"
+    },
+    indie: {
+        musicTag: "_.karigari_ · Classic Indie (Guitar Vibe)",
+        captionText: "Indie retro tunes are close to the heart 🎵✨\n\nA raw recording highlighting double-tracked vocal harmonies over warm guitar textures. Bringing back that classic indie charm.\n\n#indie #ballad #vocals #retro #recording #unplugged",
+        likesLabel: "Liked by advitiya_fam and 62 others",
+        postDate: "DECEMBER 03, 2025",
+        reelUrl: "https://www.instagram.com/reel/DXAUFTuk0Gh/"
+    }
+};
+
 // --- Mock Reels Songs / Sounds ---
 // We synthesize warm synth tones using the Web Audio API when playing,
 // giving Suhail a futuristic singing/voice instrument experience directly in browser.
@@ -184,7 +209,27 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollSpy();
     initSynthesisCanvas();
     initContactForm();
+    initHoverVideos();
 });
+
+function initHoverVideos() {
+    const reelCards = document.querySelectorAll('.reel-card');
+    reelCards.forEach(card => {
+        const video = card.querySelector('.reel-hover-video');
+        card.addEventListener('mouseenter', () => {
+            if (video) {
+                video.play().catch(err => console.log("Autoplay blocked: ", err));
+                video.style.opacity = '1';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            if (video) {
+                video.pause();
+                video.style.opacity = '0.6';
+            }
+        });
+    });
+}
 
 // --- Custom Cursor Logic ---
 function initCustomCursor() {
@@ -309,14 +354,22 @@ window.closeProjectModal = function() {
 };
 
 // --- Reels Modal & Vocal Cover Player ---
-window.openReelPlayer = function(audioPath, trackName, description, reelUrl) {
+window.openReelPlayer = function(audioPath, trackName, description, reelUrl, reelKey) {
     const modal = document.getElementById('reel-player-modal');
-    document.getElementById('reel-vocal-title').textContent = trackName;
-    document.getElementById('reel-vocal-desc').textContent = description;
     
-    document.getElementById('sidebar-reel-title').textContent = trackName;
-    document.getElementById('sidebar-reel-description').textContent = `${description}. Featured cover performance by Mohd Suhail. Exploring vocal resonance and acoustic harmonies.`;
-    document.getElementById('reel-instagram-link').href = reelUrl;
+    const data = reelsDatabase[reelKey] || {
+        musicTag: trackName,
+        captionText: description,
+        likesLabel: "Liked by you and others",
+        postDate: "TODAY",
+        reelUrl: reelUrl
+    };
+    
+    document.getElementById('reel-music-tag').textContent = data.musicTag;
+    document.getElementById('reel-caption-text').innerHTML = data.captionText.replace(/\n/g, '<br>');
+    document.getElementById('reel-likes-label').textContent = data.likesLabel;
+    document.getElementById('reel-post-date').textContent = data.postDate;
+    document.getElementById('reel-instagram-link').href = data.reelUrl;
     
     // Reset scrubber
     document.getElementById('audio-seek-slider').value = 0;
@@ -327,7 +380,31 @@ window.openReelPlayer = function(audioPath, trackName, description, reelUrl) {
     document.body.style.overflow = 'hidden';
     
     // Automatically play the synthesized keyboard/string cover representation
-    startSyntheticSynth(trackName);
+    startSyntheticSynth(data.musicTag);
+};
+
+window.postMockComment = function(btn) {
+    const input = btn.previousElementSibling;
+    const commentText = input.value.trim();
+    if (!commentText) return;
+    
+    const commentsList = document.querySelector('.ig-panel-comments');
+    const newComment = document.createElement('div');
+    newComment.className = 'ig-comment-row';
+    newComment.innerHTML = `
+        <div class="ig-profile-pic small user-guest" style="background-color: #555;">
+            <span>U</span>
+        </div>
+        <div class="ig-comment-content">
+            <span class="ig-username">visitor</span>
+            <span class="ig-caption-text">${escapeHtml(commentText)}</span>
+        </div>
+    `;
+    commentsList.appendChild(newComment);
+    
+    // Scroll to bottom
+    commentsList.scrollTop = commentsList.scrollHeight;
+    input.value = '';
 };
 
 window.closeReelPlayer = function() {
