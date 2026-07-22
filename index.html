@@ -263,15 +263,16 @@
                     <div class="music-intro">
                         <h3 class="font-art">Acoustic Covers & Reels</h3>
                         <p>I find peace in music. I sing and perform acoustic renditions of songs that move me. These are shared on Instagram as reels, showcasing my musical side.</p>
-                        <div class="now-playing-status">
+                        <div class="now-playing-status" style="margin-bottom: 2rem;">
                             <div class="pulse-indicator"></div>
                             <span>Click a reel to listen to my performance covers</span>
                         </div>
+                        <a href="https://www.instagram.com/p/DJ35btGpQsB/" target="_blank" rel="noopener" class="btn-side btn-gold">Read Karigari Origin Story &rarr;</a>
                     </div>
 
                     <div class="reels-deck">
                         <!-- Reel Card 1 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover1.mp3', 'Late Night Acoustics', 'Raw vocals & acoustic chords')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover1.mp3', 'Late Night Acoustics', 'Raw vocals & acoustic chords', 'https://www.instagram.com/reel/DJwjM16JYNh/')">
                             <div class="reel-thumbnail">
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
@@ -288,7 +289,7 @@
                         </div>
 
                         <!-- Reel Card 2 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover2.mp3', 'Melodic Soul Cover', 'Strumming to the sunset - Acoustic Vibe')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover2.mp3', 'Melodic Soul Cover', 'Strumming to the sunset - Acoustic Vibe', 'https://www.instagram.com/reel/DYw0VQWhFCq/')">
                             <div class="reel-thumbnail">
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
@@ -305,7 +306,7 @@
                         </div>
 
                         <!-- Reel Card 3 -->
-                        <div class="reel-card" onclick="openReelPlayer('assets/cover3.mp3', 'Classic Indie Ballad', 'Classic cover with warm textures')">
+                        <div class="reel-card" onclick="openReelPlayer('assets/cover3.mp3', 'Classic Indie Ballad', 'Classic cover with warm textures', 'https://www.instagram.com/reel/DXAUFTuk0Gh/')">
                             <div class="reel-thumbnail">
                                 <div class="reel-overlay">
                                     <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
@@ -554,6 +555,7 @@
                     </div>
                     <!-- Audio element -->
                     <audio id="reel-audio-element" src=""></audio>
+                    <a id="reel-instagram-link" href="#" target="_blank" rel="noopener" class="btn-side btn-gold" style="width: 100%; text-align: center; margin-top: 1.8rem; display: inline-block;">Open Original Reel</a>
                 </div>
             </div>
         </div>

@@ -309,13 +309,14 @@ window.closeProjectModal = function() {
 };
 
 // --- Reels Modal & Vocal Cover Player ---
-window.openReelPlayer = function(audioPath, trackName, description) {
+window.openReelPlayer = function(audioPath, trackName, description, reelUrl) {
     const modal = document.getElementById('reel-player-modal');
     document.getElementById('reel-vocal-title').textContent = trackName;
     document.getElementById('reel-vocal-desc').textContent = description;
     
     document.getElementById('sidebar-reel-title').textContent = trackName;
     document.getElementById('sidebar-reel-description').textContent = `${description}. Featured cover performance by Mohd Suhail. Exploring vocal resonance and acoustic harmonies.`;
+    document.getElementById('reel-instagram-link').href = reelUrl;
     
     // Reset scrubber
     document.getElementById('audio-seek-slider').value = 0;
