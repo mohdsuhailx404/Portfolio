@@ -2487,3 +2487,15 @@ input:focus, textarea:focus {
     transform: scale(1.02);
 }
 
+/* Hobby Cards styling inside Get to Know Me modal */
+.hobby-card {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--alias-accent) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 0 8px 30px rgba(0, 242, 254, 0.15) !important;
+}
+

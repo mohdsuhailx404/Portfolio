@@ -363,6 +363,22 @@ window.closeProjectModal = function() {
     document.body.style.overflow = '';
 };
 
+window.openPersonalModal = function() {
+    const modal = document.getElementById('personal-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closePersonalModal = function() {
+    const modal = document.getElementById('personal-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
+
 // --- Reels Modal & Vocal Cover Player ---
 window.openReelPlayer = function(audioPath, trackName, description, reelUrl, reelKey) {
     const modal = document.getElementById('reel-player-modal');

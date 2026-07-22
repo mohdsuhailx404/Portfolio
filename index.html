@@ -31,7 +31,8 @@
             <a href="#synthesis-section" class="nav-link-synthesis">The Synthesis</a>
             <a href="#contact-section" class="nav-link-contact">Connect</a>
         </nav>
-        <div class="header-actions">
+        <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <a href="assets/resume.pdf" download="Mohd_Suhail_Resume.pdf" class="btn-side btn-blue" style="text-decoration: none; padding: 0.5rem 1rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-file-download"></i> Resume</a>
             <a href="#contact-section" class="cta-btn">Get In Touch</a>
         </div>
     </header>
@@ -599,7 +600,7 @@
                         <div class="social-links-footer">
                             <a href="https://github.com/mohdsuhailx404" target="_blank" rel="noopener">GitHub</a>
                             <a href="https://www.linkedin.com/in/mohdsuhailx404/" target="_blank" rel="noopener">LinkedIn</a>
-                            <a href="https://www.instagram.com/sohailkhan__.__" target="_blank" rel="noopener">Instagram (Personal)</a>
+                            <a href="javascript:void(0)" onclick="openPersonalModal()" class="highlight-gold" style="font-weight: 700; border-bottom: 1.5px dashed var(--karigari-accent); color: var(--karigari-accent) !important; padding-bottom: 2px;">Get to Know Me &rarr;</a>
                             <a href="https://www.instagram.com/_.karigari_" target="_blank" rel="noopener">Instagram (Karigari)</a>
                         </div>
                     </div>
@@ -649,6 +650,51 @@
             <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
             <div id="project-modal-body">
                 <!-- Content injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Personal Hobbies Modal (Get to Know Me) -->
+    <div id="personal-modal" class="modal-overlay" onclick="closePersonalModal()">
+        <div class="modal-content glass-card" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closePersonalModal()">&times;</button>
+            <div id="personal-modal-body">
+                <div class="project-modal-details">
+                    <div class="modal-header" style="margin-bottom: 2rem;">
+                        <span class="modal-tag">Interests & Hobbies</span>
+                        <h2 class="modal-title">Get to Know Me</h2>
+                        <span class="modal-meta">Alias Vagabond / Off-Duty Pursuits</span>
+                    </div>
+                    <div class="modal-body">
+                        <p style="margin-bottom: 1.5rem; color: var(--alias-text-dim); line-height: 1.6;">Beyond engineering and art, these are the corners of the internet where I write essays, play strategic board games, log my film history, and share casual moments.</p>
+                        
+                        <div class="hobby-links-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 1rem;">
+                            <a href="https://mohdsuhailx404.substack.com" target="_blank" rel="noopener" class="hobby-card glass-card" style="text-decoration: none; padding: 1.5rem; display: block; transition: var(--transition-fast); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px;">
+                                <div style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #ff6719;"><i class="fas fa-bookmark"></i></div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Substack</h4>
+                                <p style="font-size: 0.8rem; color: var(--alias-text-dim); line-height: 1.4; margin: 0;">Personal essays, reflections on tech, and creative writing pieces.</p>
+                            </a>
+                            
+                            <a href="https://www.chess.com/member/aliasvagabond" target="_blank" rel="noopener" class="hobby-card glass-card" style="text-decoration: none; padding: 1.5rem; display: block; transition: var(--transition-fast); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px;">
+                                <div style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #81b64c;"><i class="fas fa-chess-knight"></i></div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Chess.com</h4>
+                                <p style="font-size: 0.8rem; color: var(--alias-text-dim); line-height: 1.4; margin: 0;">Tactical games, blitz battles, and online strategic matches.</p>
+                            </a>
+                            
+                            <a href="https://boxd.it/b558z" target="_blank" rel="noopener" class="hobby-card glass-card" style="text-decoration: none; padding: 1.5rem; display: block; transition: var(--transition-fast); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px;">
+                                <div style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #ff8000;"><i class="fas fa-film"></i></div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Letterboxd</h4>
+                                <p style="font-size: 0.8rem; color: var(--alias-text-dim); line-height: 1.4; margin: 0;">Movie reviews, logs, and curated film watchlists.</p>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/sohailkhan__.__" target="_blank" rel="noopener" class="hobby-card glass-card" style="text-decoration: none; padding: 1.5rem; display: block; transition: var(--transition-fast); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px;">
+                                <div style="font-size: 1.8rem; margin-bottom: 0.8rem; color: #e1306c;"><i class="fab fa-instagram"></i></div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Instagram (Personal)</h4>
+                                <p style="font-size: 0.8rem; color: var(--alias-text-dim); line-height: 1.4; margin: 0;">Casual moments, highlights, and daily updates.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
